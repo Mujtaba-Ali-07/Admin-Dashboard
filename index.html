@@ -247,7 +247,7 @@
               </div>
             </div>
             <div class="other-profile">
-              <div><img src="images/profile-img.png" alt="" /></div>
+              <div><img src="/images/profile-img.png" alt="" /></div>
               <div>
                 <h3><b>@mujtaba</b></h3>
                 <p>Sign-up Form</p>
@@ -264,5 +264,18 @@
         </div>
       </div>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.createElement("button");
+        menuToggle.className = "menu-toggle";
+        menuToggle.innerHTML = "☰";
+        menuToggle.addEventListener("click", function () {
+          document.querySelector("aside").classList.toggle("active");
+        });
+
+        const header = document.querySelector("header");
+        header.insertBefore(menuToggle, header.firstChild);
+      });
+    </script>
   </body>
 </html>
